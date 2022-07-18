@@ -1,0 +1,84 @@
+https://docs.djangoproject.com/en/4.0/intro/tutorial01/
+https://github.com/benie254/django_registration
+
+__START__
+-python3.8 -m venv --without-pip virtual
+-source virtual/bin/activate
+-curl https://bootstrap.pypa.io/get-pip.py | python
+-pip install django==4.0.4
+-python3.8
+>>>import django
+>>>django.get_version()
+-django-admin startproject <name of app>
+-python3.8 manage.py runserver
+
+
+__DEFINING APP CONFIG. IN PROJECT__
+Step 1: define our applications configurations inside our project in settings.py
+Inside settings.py file add the app configuration <news.apps.NewsConfig>  inside our INSTALLED_APPS settings. 
+
+
+__CREATING TEMPLATES__
+
+
+$ pip install django-bootstrap-v5
+
+__Connecting To Postgres__
+Step 1 : Install database dependency: pip install psycopg2
+Step 2 : Create a Postgres database for our project: 
+(virtual)$ psql
+oyesa=# CREATE DATABASE tribune;
+Step 3: Change project database settings to use Postgres: settings.py >>
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tribune',
+        'USER': '<Your Database Username >',
+    'PASSWORD':'<Your Database Password>',
+    }
+
+Step 4: Setting the Timezone >>settings.py>>TIME_ZONE = 'Africa/Nairobi'
+
+Step 5: Initial Migration: python3.8 manage.py migrate
+
+after creating models: First: Run Checks>>python3.8 manage.py check
+Second: Make Migrations>>python manage.py makemigrations news
+Third: View Migration>>python3.8 manage.py sqlmigrate news 0001
+Fourth: Run Migration>>python3.8 manage.py migrate
+
+Remember:
+Change your models (in models.py).
+Run python manage.py makemigrations to create migrations for those changes
+Run python manage.py migrate to apply those changes to the database.
+
+
+__Django Admin__
+python manage.py createsuperuser : This command prompts you to add a username and password for superuser formation.
+
+Adding Models to the Admin Page:  Inside our app's admin.py we add the models to our administration page.
+
+
+
+
+__ERRORS__
+TypeError: __init__() missing 1 required positional argument: 'on_delete' >>> To solve this issue, you need to add the on_delete parameter.
+e.g.: parent = models.ForeignKey(Parent, on_delete=models.CASCADE) Refer:https://docs.djangoproject.com/en/3.2/ref/models/fields/#django.db.models.ForeignKey
+
+
+
+__Basic Database Queries__
+python manage.py shell
+
+__User stories__
+As a user of the application I should be able to:
+-Sign in to the application to start using.
+-Upload my pictures to the application.
+-See my profile with all my pictures.
+-Follow other users and see their pictures on my timeline.
+-Like a picture and leave a comment on it.
+
+
+__Models__
+profile
+
+
+
