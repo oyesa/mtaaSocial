@@ -80,5 +80,5 @@ As a user of the application I should be able to:
 __Models__
 profile
 
-
-
+__To run checks if models were set up correctly__
+python3.6 manage.py check

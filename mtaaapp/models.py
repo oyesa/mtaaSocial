@@ -1,6 +1,3 @@
-from email.mime import image
-from socket import CAN_SFF_MASK
-from tkinter import CASCADE
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
