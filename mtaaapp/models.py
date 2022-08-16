@@ -19,4 +19,4 @@ class Profile(models.Model):
 
 class Comments(models.Model):
   user=models.ForeignKey(User, on_delete=models.CASCADE)
-  comment=models.CharField(max_length=400)
+  comment=models.CharField(max_length=1500)
