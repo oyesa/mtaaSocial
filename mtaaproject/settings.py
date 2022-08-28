@@ -125,7 +125,6 @@ STATIC_URL = 'static/'
 
 
 
-
 #cloudinary settings
 cloudinary.config(
   cloud_name = "oyesa",

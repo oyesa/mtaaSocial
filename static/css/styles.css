@@ -10,6 +10,20 @@ font-family: 'Playfair Display', serif; */
   box-sizing: border-box;
 }
 
+
+/* navbar */
+
+.hero{
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(static/mtaa1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
 h1{
   font-family: 'Playfair Display', serif; 
   font-size: 8.8rem;

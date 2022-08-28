@@ -4,11 +4,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {% if title %}
-    <title>{{title}}</title>
-    {% else %}
-    <title>Mtaa Social</title>
-    {% endif %}
+   
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,7 +12,7 @@
 
     <!-- Bootstrap CSS -->
     {% block styles %}
-    {% bootstrap_css %}
+    {{ super }}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
